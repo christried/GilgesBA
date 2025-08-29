@@ -1,0 +1,23 @@
+.menu-toolbar {
+  width: 100%;
+  background-color: #810081;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar-icon {
+  margin-right: 10px;
+}
+
+.info-button {
+  cursor: default; /* Set cursor to default for the "Info" button */
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}

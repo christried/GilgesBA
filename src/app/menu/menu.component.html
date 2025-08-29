@@ -1,0 +1,53 @@
+<mat-toolbar class="menu-toolbar">
+  <h1>AI Customer Support</h1>
+
+  <span class="spacer"></span>
+
+  <div class="icons">
+    <button
+      class="toolbar-icon"
+      mat-icon-button
+      [matMenuTriggerFor]="menu"
+      matTooltip="More Options"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <!-- Menu to Reset, Speak to a real Person? [...] -->
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="onClickReset()">
+        <mat-icon>history</mat-icon>
+        <span>Reset Chat</span>
+      </button>
+      <button mat-menu-item (click)="onClickRealPersonDialog()">
+        <mat-icon>support_agent</mat-icon>
+        <span>Speak To A Real Person</span>
+      </button>
+      <!-- Email contact to dev person -->
+      <button mat-menu-item (click)="onClickFeedback()">
+        <mat-icon>feedback</mat-icon>
+        <span>Send Feedback To The Developer</span>
+      </button>
+    </mat-menu>
+
+    <!-- Information about current build state (fully operational yet?) -->
+    <button
+      class="toolbar-icon info-button"
+      mat-icon-button
+      matTooltip="This app is in early development stage and everything is subject to change"
+    >
+      <mat-icon>rocket_launch</mat-icon>
+    </button>
+
+    <!-- Toggle Group for Language Selection -->
+    <mat-button-toggle-group
+      name="languageSelection"
+      aria-label="language Selection"
+      [hideSingleSelectionIndicator]="true"
+      [value]="selectedLanguage()"
+      (change)="onLanguageChange($event.value)"
+    >
+      <mat-button-toggle value="german">DE</mat-button-toggle>
+      <mat-button-toggle value="english">EN</mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+</mat-toolbar>

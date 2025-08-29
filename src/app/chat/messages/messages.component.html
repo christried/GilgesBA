@@ -1,0 +1,36 @@
+<mat-list class="messages-container">
+  <div class="scrollable" #scrollable>
+    @for (message of messages; track message ) {
+    <mat-list-item
+      [ngClass]="{
+        'user-message': message.from === 'user',
+        'bot-message': message.from === 'bot'
+      }"
+    >
+      <img
+        matListItemAvatar
+        [src]="message.from === 'user' ? 'person.png' : 'bot.png'"
+        [alt]="message.from === 'user' ? 'icon of a person' : 'icon of a robot'"
+      />
+
+      <p>
+        @if (message.from === 'user') {
+        <span class="user-bubble">
+          <markdown ngPreserveWhitespaces> {{ message.content }} </markdown>
+        </span>
+        } @if (message.from === 'bot') {
+        <span class="typewriter-container">
+          <span class="bot-bubble">
+            <markdown ngPreserveWhitespaces>
+              {{ message.content | removeSources }}
+            </markdown>
+          </span>
+
+          <span class="cursor"></span>
+        </span>
+        }
+      </p>
+    </mat-list-item>
+    }
+  </div>
+</mat-list>

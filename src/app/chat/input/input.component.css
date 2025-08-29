@@ -1,0 +1,10 @@
+.message-input-form {
+  display: flex;
+  align-items: normal;
+  width: 100%;
+}
+
+.message-input-container {
+  flex: 1;
+  margin-right: 10px; /* Add some space between the input and the button */
+}

@@ -1,0 +1,72 @@
+.messages-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 60vh;
+  width: 100%;
+}
+
+.user-message {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+p {
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: keep-all;
+}
+
+.mdc-list-item.mdc-list-item--with-one-line {
+  height: auto;
+}
+
+.user-bubble {
+  background-color: #810081;
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: inline-block; /* Ensures background only covers the text */
+}
+
+.bot-message .typewriter-container {
+  position: relative;
+  display: inline-block;
+}
+
+.bot-bubble {
+  background-color: #8b6485;
+  padding: 5px 10px;
+  border-radius: 8px;
+  display: inline-block;
+  word-wrap: break-word;
+  white-space: normal;
+  /* Create a mask animation that reveals text from left to right */
+  mask-image: linear-gradient(to right, black 50%, transparent 50%);
+  mask-size: 200% 100%;
+  mask-position: right;
+  animation: reveal-text 1s steps(40, end) forwards;
+}
+
+@keyframes reveal-text {
+  from {
+    mask-position: right;
+  }
+  to {
+    mask-position: left;
+  }
+}
+
+.mdc-list-item--with-leading-avatar .mat-mdc-list-item-avatar {
+  background-color: #81008100;
+}
+
+.scrollable {
+  overflow-y: auto;
+  max-height: 60vh;
+  scrollbar-gutter: stable; /* Prevents layout shift when scrollbar appears */
+}
+
+.scrollable::-webkit-scrollbar {
+  display: none; /* WebKit (Chrome, Safari) */
+  width: 0;
+}

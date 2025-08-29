@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Contacting Staff Members</h2>
+
+<mat-dialog-content class="mat-typography">
+  <h3>No Staff Members are currently available for Live Chat</h3>
+  <p>
+    We are sorry, but no staff members are currently available for live chat.
+    Please leave your email address below, and we will get back to you as soon
+    as possible.
+  </p>
+
+  <mat-form-field>
+    <mat-label>What's your email?</mat-label>
+    <input matInput [(ngModel)]="email" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Close</button>
+  <button mat-button [mat-dialog-close]="email()" cdkFocusInitial>Send</button>
+</mat-dialog-actions>
