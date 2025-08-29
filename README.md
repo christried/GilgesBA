@@ -59,10 +59,11 @@ touch .env
 
 Now, open the newly created .env file in the backend directory and add your credentials. Do NOT ever commit this file.
 .env
-OPENAI_API_KEY="your-openai-api-key-here"
-TRELLO_API_KEY="your-trello-api-key-here"
-TRELLO_TOKEN="your-trello-token-here"
-TRELLO_LIST_ID="your-trello-list-id-for-tickets"
+
+- OPENAI_API_KEY="your-openai-api-key-here"
+- TRELLO_API_KEY="your-trello-api-key-here"
+- TRELLO_TOKEN="your-trello-token-here"
+- TRELLO_LIST_ID="your-trello-list-id-for-tickets"
 
 3. Frontend Setup (Angular)
    The frontend contains the user interface for the chat.
