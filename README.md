@@ -17,38 +17,41 @@ The application provides a web-based chat interface where users can interact wit
 ## 🚀 Getting Started
 
 Follow these instructions to get a local copy up and running for development and testing.
-Prerequisites
+
+### Prerequisites
+
 Before you begin, ensure you have the following installed:
-[Node.js (v18 or newer)](https://nodejs.org/en)
-[Python (v3.8 or newer)](https://www.python.org/)
-[An OpenAI API Key](https://platform.openai.com/api-keys)
-[A Trello API Key, Token, and List ID](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/)
+
+- [Node.js (v18 or newer)](https://nodejs.org/en)
+- [Python (v3.8 or newer)](https://www.python.org/)
+- [An OpenAI API Key](https://platform.openai.com/api-keys)
+- [A Trello API Key, Token, and List ID](https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/)
 
 1. Clone the Repository
    First, clone the project to your local machine:
-   git clone [https://github.com/christried/GilgesBA.git](https://github.com/christried/GilgesBA.git)
-   cd GilgesBA
+   `git clone [https://github.com/christried/GilgesBA.git](https://github.com/christried/GilgesBA.git)`
+   `cd GilgesBA`
 
 2. Backend Setup (Flask)
    The backend powers the API and connects to the external services.
 
 ### Navigate to the backend directory
 
-cd backend
+`cd backend`
 
 ### Create a Python virtual environment
 
-python -m venv venv
+`python -m venv venv`
 
 ### Activate the virtual environment
 
-### On Windows:
+#### On Windows:
 
-venv\Scripts\activate
+`venv\Scripts\activate`
 
-### On macOS/Linux:
+#### On macOS/Linux:
 
-source venv/bin/activate
+`source venv/bin/activate`
 
 ### Create a .env file to store your API keys
 
@@ -66,27 +69,29 @@ TRELLO_LIST_ID="your-trello-list-id-for-tickets"
 
 ### Navigate back to the project's root directory
 
-cd ..
+`cd ..`
 
 ### Install the required npm packages
 
-npm install
+`npm install`
 
 4. Running the Application
    You need to run both the backend and frontend servers at the same time in separate terminal windows.
-   Terminal 1: Start the Backend Server
-   cd backend
+
+Terminal 1: Start the Backend Server
+`cd backend`
 
 ### Make sure your virtual environment is still active
 
-python app.py
+`python app.py`
 
 The Flask API should now be running on http://localhost:5000.
+
 Terminal 2: Start the Frontend Server
 
 ### From the project's root directory
 
-ng serve
+`ng serve`
 
 The Angular app should now be running on http://localhost:4200.
 Open your web browser and navigate to http://localhost:4200 to use the chatbot.
